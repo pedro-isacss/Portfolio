@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Pedro Isac | Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      background-color: hsl(183, 100%, 15%);
+      padding: 32px 8px;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .attribution a {
+      color: hsl(172, 67%, 45%);
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Calculator -->
+    <div class="calculator">
+      <label class="bill">
+        Bill
+        <input type="number" name="bill" id="bill" placeholder="0.00">
+      </label>
+      <div class="tip">
+        <span>Select Tip %</span>
+        <div>
+          <button id="tip-5" onclick="clickTip(5)">5%</button>
+          <button id="tip-10" onclick="clickTip(10)">10%</button>
+          <button id="tip-15" onclick="clickTip(15)">15%</button>
+          <button id="tip-25" onclick="clickTip(25)">25%</button>
+          <button id="tip-50" onclick="clickTip(50)">50%</button>
+          <input placeholder="Custom" id="tip" type="number">
+        </div>
+      </div>
+      <label class="people">
+        Number of People
+        <input type="number" name="people" id="people" placeholder="0">
+      </label>
+    </div>
+    <!-- Result -->
+    <div class="result">
+      <div>
+        <div>
+          <p>Tip Amount</p>
+          <span>/ person</span>
+        </div>
+        <span class="value" id="tip-result">&dollar;0.00</span>
+      </div>
+      <div>
+        <div>
+          <p>Total</p>
+          <span>/ person</span>
+        </div>
+        <span class="value" id="total">&dollar;0.00</span>
+      </div>
+      <button class="reset-btn" id="reset" onclick="resetCalculate()">Reset</button>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.instagram.com/ss.pedroisac/">Pedro Isac</a>.
+  </div>
+  <script src="./scripts.js"></script>
+</body>
+
+</html>

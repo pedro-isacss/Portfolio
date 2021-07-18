@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --veryDarkCyan: hsl(183, 100%, 15%);
+  --darkGrayishCyan: hsl(186, 14%, 43%);
+  --lightGrayishCyan: hsl(185, 41%, 84%);
+  --white: hsl(0, 0%, 100%);
+  --strongCyan: hsl(172, 67%, 45%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 48px;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.calculator .bill {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  color: var(--darkGrayishCyan);
+}
+
+.calculator .bill input {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  text-align: right;
+  color: var(--veryDarkCyan);
+  font-weight: 700;
+  font-size: 24px;
+  border-radius: 4px;
+  border: none;
+  margin-top: 8px;
+  background-image: url("./images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position-x: 8px;
+  background-position-y: center;
+  background-size: 16px;
+}
+
+.calculator .tip {
+  display: flex;
+  flex-direction: column;
+  color: var(--darkGrayishCyan);
+  margin-top: 24px;
+}
+
+.calculator div {
+  width: 100%;
+  max-width: 400px;
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  gap: 12px;
+  justify-content: center;
+}
+
+.calculator div button {
+  padding: 12px;
+  background-color: var(--veryDarkCyan);
+  color: var(--lightGrayishCyan);
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  font-size: 24px;
+}
+
+.calculator div input {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--veryDarkCyan);
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+}
+
+.calculator .people {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  color: var(--darkGrayishCyan);
+}
+
+.calculator .people input {
+  border-radius: 4px;
+  border: none;
+  padding: 8px;
+  font-size: 24px;
+  margin-top: 8px;
+  text-align: right;
+  font-weight: 700;
+  color: var(--veryDarkCyan);
+  background-image: url("./images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position-x: 8px;
+  background-position-y: center;
+  background-size: 16px;
+}
+
+.result {
+  background-color: var(--veryDarkCyan);
+  padding: 3%;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  min-height: 60vh;
+  position: relative;
+  box-shadow: 7px 7px 33px rgb(0, 0, 0, 0.3);
+}
+
+.result div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.result div:nth-child(2) {
+  margin-top: 24px;
+}
+
+.result div div p {
+  color: var(--lightGrayishCyan);
+  font-weight: 700;
+}
+
+.result div div span {
+  color: var(--darkGrayishCyan);
+}
+
+.result .value {
+  font-size: 48px;
+  color: var(--strongCyan);
+  font-weight: 700;
+}
+
+.result .reset-btn {
+  background-color: var(--strongCyan);
+  color: var(--veryDarkCyan);
+  border: none;
+  width: 88%;
+  text-align: center;
+  border-radius: 4px;
+  padding: 8px;
+  position: absolute;
+  bottom: 8%;
+  left: 6%;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+@media (max-width: 840px) {
+  .container {
+    flex-direction: column;
+  }
+  .result {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding: 24px;
+    margin-top: 24px;
+  }
+  .calculator div {
+    grid-template-columns: 48% 48%;
+  }
+  .result {
+    min-height: 45vh;
+    padding: 8%;
+  }
+  .result .value {
+    font-size: 32px;
+  }
+}
